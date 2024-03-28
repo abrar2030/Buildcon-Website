@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      a {
+        display: block;
+        margin-right: 100px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-size: 20px;
+        max-width: 200px;
+      }
+      .subsa {
+        border: 2px solid #000;
+      }
+      a:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+    <style>
+      .demo-header {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+      .demo-header h2 {
+        margin: 0;
+        font-size: 32px;
+      }
+      .video-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .video {
+        display: block;
+        width: 100%;
+      }
+    </style>
+    <style>
+      .videoof {
+        margin-left: 230px;
+      }
+      .tableproject {
+        text-align: center;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      th {
+        background-color: #cccccc;
+        text-align: center;
+        padding: 10px;
+      }
+
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      caption {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      summary {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    </style>
+    <style>
+      body {
+        background: #f2f2f2 url("background-image.jpg") no-repeat center center
+          fixed;
+        background-size: cover;
+      }
+
+      .contactpage {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px;
+      }
+
+      .contactpage h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .contactpage form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contactpage label {
+        display: block;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 500px;
+        font-weight: bold;
+      }
+
+      .contactpage input[type="text"],
+      .contactpage textarea {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .contactpage .radio-options,
+      .contactpage .checkbox-option {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .contactpage input[type="radio"],
+      .contactpage input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      .contactpage .button-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .contactpage input[type="submit"],
+      .contactpage input[type="reset"] {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+
+      .contactpage input[type="submit"]:hover,
+      .contactpage input[type="reset"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+    <style>
+      .contactpage {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px;
+      }
+
+      .contactpage h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .contactpage form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contactpage label {
+        display: block;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 500px;
+        font-weight: bold;
+      }
+
+      .contactpage input[type="text"],
+      .contactpage textarea {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .contactpage .radio-options,
+      .contactpage .checkbox-option {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .contactpage input[type="radio"],
+      .contactpage input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      .contactpage .button-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .contactpage input[type="submit"],
+      .contactpage input[type="reset"] {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+
+      .contactpage input[type="submit"]:hover,
+      .contactpage input[type="reset"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <span class="text-warning">Build</span>Con
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="false"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="images/home-1.jpg"
+            class="d-block w-100 h-100"
+            alt="This image is for Homepage"
+          />
+          <div class="carousel-caption">
+            <h5>Dream House</h5>
+            <p>
+              Welcome to BuildCon, the premier construction and contracting
+              company in the area.
+            </p>
+            <p><a href="#" class="btn btn-warning mt-3">Read More</a></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/home-2.jpg"
+            class="d-block w-100 h-100"
+            alt="This image is for Homepage"
+          />
+          <div class="carousel-caption">
+            <h5>Dream House</h5>
+            <p>Experience luxury living like never before</p>
+            <p><a href="#" class="btn btn-warning mt-3">Read More</a></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/home-3.jpg"
+            class="d-block w-100 h-100"
+            alt="This image is for Homepage"
+          />
+          <div class="carousel-caption">
+            <h5>Dream House</h5>
+            <p>Discover the perfect blend of comfort and style</p>
+            <p><a href="#" class="btn btn-warning mt-3">Read More</a></p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <section id="about" class="about section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-12">
+            <div class="about-img">
+              <img
+                src="images/about.jpg"
+                alt="The image is for about page"
+                class="image-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+            <div class="about-text">
+              <h2>We provide best quality services ever</h2>
+              <p>
+                We specialize in providing top-quality services for both
+                commercial and residential clients, with a focus on quality,
+                safety, and professionalism.
+              </p>
+              <a href="#" class="btn btn-warning">Learn More</a>
+            </div>
+            <div class="subs">
+              <h1>Our Subsidiaries</h1>
+              <a href="https://www.vinci.com/" class="subsa" target="_blank"
+                >Vinci</a
+              >
+              <a href="https://www.grupoacs.com/" class="subsa" target="_blank"
+                >Grupo ACS</a
+              >
+              <a href="https://www.hochtief.com/" class="subsa" target="_blank"
+                >Hochtief</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header text-center pb-5">
+              <h2>Our Services</h2>
+              <p>
+                At BuildCon, we offer a wide range of construction and
+                contracting services to meet the needs of our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-white text-center bg-dark pb-2">
+              <div class="card-body">
+                <i class="bi bi-subtract"></i>
+                <h3 class="card-title">New construction</h3>
+                <p class="lead">
+                  Our new construction services encompass everything from design
+                  and planning to construction and finishing touches. In
+                  addition, we also provide comprehensive project management to
+                  ensure that the construction process runs smoothly and is
+                  completed on time and within budget.
+                </p>
+                <button class="btn btn-warning text-dark">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-white text-center bg-dark pb-2">
+              <div class="card-body">
+                <i class="bi bi-subtract"></i>
+                <h3 class="card-title">Renovations and remodeling</h3>
+                <p class="lead">
+                  Whether you're looking to update your home or business with a
+                  fresh new look, or need to make necessary repairs, our
+                  renovations and remodeling services can help. We'll work with
+                  you to create a plan that meets your needs and fits your
+                  budget, and deliver exceptional results every time.
+                </p>
+                <button class="btn btn-warning text-dark">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-white text-center bg-dark pb-2">
+              <div class="card-body">
+                <i class="bi bi-subtract"></i>
+                <h3 class="card-title">Commercial construction</h3>
+                <p class="lead">
+                  From office buildings and retail spaces to industrial
+                  complexes and more, our commercial construction services are
+                  designed to meet the needs of businesses of all sizes. We'll
+                  work with you to create a space that meets your unique needs
+                  and supports your business goals.
+                </p>
+                <button class="btn btn-warning text-dark">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header text-center pb-5">
+              <h2>Our Projects</h2>
+              <p>
+                As a premier construction and contracting company, we are proud
+                to have completed some of the most iconic skyscrapers in the
+                city.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <img
+                    src="images/project-1.jpg"
+                    alt="This image is for project"
+                    class="imgsize"
+                  />
+                </div>
+                <h3 class="card-title">The Summit Tower</h3>
+                <p class="lead">
+                  This impressive structure stands at 80 stories tall and is the
+                  tallest building in the city. Our team worked tirelessly to
+                  bring this vision to life, using the latest technology and
+                  expert craftsmanship to create a building that is both
+                  functional and aesthetically stunning.
+                </p>
+                <button class="btn btn-warning text-dark">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <img
+                    src="images/project-2.jpg"
+                    alt="This image is for project"
+                    class="imgsize"
+                  />
+                </div>
+                <h3 class="card-title">The Horizon Tower</h3>
+                <p class="lead">
+                  The Horizon Tower is a 60-story skyscraper that features a
+                  unique design inspired by the city's skyline. Our team worked
+                  closely with the architects to ensure that the building was
+                  not only visually striking, but also energy-efficient and
+                  environmentally friendly.
+                </p>
+                <button class="btn btn-warning text-dark">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card text-center bg-white pb-2">
+              <div class="card-body text-dark">
+                <div class="img-area mb-4">
+                  <img
+                    src="images/project-3.jpg"
+                    alt="The image is for project"
+                    class="imgsize"
+                  />
+                </div>
+                <h3 class="card-title">The Skyline Plaza</h3>
+                <p class="lead">
+                  The Skyline Plaza is a mixed-use development that includes
+                  both residential and commercial spaces. With 50 stories of
+                  luxury apartments, retail space, and office space, this
+                  building is a true landmark in the city. Our team was
+                  responsible for all aspects of the construction.
+                </p>
+                <button class="btn btn-warning text-dark">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tableproject">
+          <h2>Project Table</h2>
+          <p>Information about the three projects</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Project Name</th>
+                <th>Height</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The Summit Tower</td>
+                <td>80 stories</td>
+                <td>
+                  This impressive structure stands at 80 stories tall and is the
+                  tallest building in the city. Our team worked tirelessly to
+                  bring this vision to life, using the latest technology and
+                  expert craftsmanship to create a building that is both
+                  functional and aesthetically stunning.
+                </td>
+              </tr>
+              <tr>
+                <td>The Horizon Tower</td>
+                <td>60 stories</td>
+                <td>
+                  The Horizon Tower is a 60-story skyscraper that features a
+                  unique design inspired by the city's skyline. Our team worked
+                  closely with the architects to ensure that the building was
+                  not only visually striking, but also energy-efficient and
+                  environmentally friendly.
+                </td>
+              </tr>
+              <tr>
+                <td>The Skyline Plaza</td>
+                <td>50 stories</td>
+                <td>
+                  The Skyline Plaza is a mixed-use development that includes
+                  both residential and commercial spaces. With 50 stories of
+                  luxury apartments, retail space, and office space, this
+                  building is a true landmark in the city. Our team was
+                  responsible for all aspects of the construction, from the
+                  initial design to the final touches.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="team section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header text-center pb-5">
+              <h2>Our team</h2>
+              <p>
+                At BuildCon, we're proud to have a team of experienced and
+                dedicated professionals who are passionate about building and
+                construction.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-center">
+              <div class="card-body">
+                <img
+                  src="images/team-1.jpg"
+                  alt="The image is for our team member"
+                  class="image-fluid rounded-circle"
+                />
+                <h2 class="card-title py-2">John Smith</h2>
+                <p class="lead">
+                  CEO - John has over 20 years of experience in the construction
+                  industry, and has a passion for creating innovative and
+                  sustainable building solutions.
+                </p>
+                <p class="socials">
+                  <i class="bi bi-twitter text-dark mx-1"></i>
+                  <i class="bi bi-facebook text-dark mx-1"></i>
+                  <i class="bi bi-linkedin text-dark mx-1"></i>
+                  <i class="bi bi-instagram text-dark mx-1"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-center">
+              <div class="card-body">
+                <img
+                  src="images/team-2.jpg"
+                  alt="The image is for our team member"
+                  class="image-fluid rounded-circle"
+                />
+                <h2 class="card-title py-2">Tom Brown</h2>
+                <p class="lead">
+                  Project Manager - Tom is an experienced project manager who is
+                  dedicated to ensuring that every project is completed on time,
+                  on budget, and to the highest standards of quality.
+                </p>
+                <p class="socials">
+                  <i class="bi bi-twitter text-dark mx-1"></i>
+                  <i class="bi bi-facebook text-dark mx-1"></i>
+                  <i class="bi bi-linkedin text-dark mx-1"></i>
+                  <i class="bi bi-instagram text-dark mx-1"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-center">
+              <div class="card-body">
+                <img
+                  src="images/team-3.jpg"
+                  alt="The image is of our team member"
+                  class="image-fluid rounded-circle"
+                />
+                <h2 class="card-title py-2">JMary Chen</h2>
+                <p class="lead">
+                  Mary is a skilled contractor who specializes in renovations
+                  and remodeling. He has a keen eye for detail and is committed
+                  to delivering exceptional results on every project.
+                </p>
+                <p class="socials">
+                  <i class="bi bi-twitter text-dark mx-1"></i>
+                  <i class="bi bi-facebook text-dark mx-1"></i>
+                  <i class="bi bi-linkedin text-dark mx-1"></i>
+                  <i class="bi bi-instagram text-dark mx-1"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-center">
+              <div class="card-body">
+                <img
+                  src="images/team-4.jpg"
+                  alt="The image is of our team member"
+                  class="image-fluid rounded-circle"
+                />
+                <h2 class="card-title py-2">Sarah Johnson</h2>
+                <p class="lead">
+                  Sarah is a talented architect who brings a creative and
+                  innovative approach to every project she works on. She has a
+                  passion for sustainable design and is committed to creating
+                  beautiful, functional spaces for our clients.
+                </p>
+                <p class="socials">
+                  <i class="bi bi-twitter text-dark mx-1"></i>
+                  <i class="bi bi-facebook text-dark mx-1"></i>
+                  <i class="bi bi-linkedin text-dark mx-1"></i>
+                  <i class="bi bi-instagram text-dark mx-1"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contactUs">
+      <div class="contactpage">
+        <h1>Contact Us</h1>
+        <form
+          action="mailto:youremail@example.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" />
+
+          <label>Reason for Contact:</label>
+          <div class="radio-options">
+            <input type="radio" id="question" name="reason" value="question" />
+            <label for="question">Question</label>
+
+            <input type="radio" id="comment" name="reason" value="comment" />
+            <label for="comment">Comment</label>
+          </div>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" cols="30"></textarea>
+
+          <div class="checkbox-option">
+            <input
+              type="checkbox"
+              id="newsletter"
+              name="newsletter"
+              value="yes"
+            />
+            <label for="newsletter">Subscribe to our newsletter?</label>
+          </div>
+
+          <div class="button-group">
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-center">
+      <div class="container">
+        <p class="text-white">All rights Reserved <br />2022</p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
